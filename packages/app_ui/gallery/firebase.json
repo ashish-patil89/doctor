@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "orb-gallery-j2cxnttyboxhvsa",
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

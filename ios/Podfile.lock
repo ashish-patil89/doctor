@@ -1,68 +1,32 @@
 PODS:
-  - DKImagePickerController/Core (4.3.9):
-    - DKImagePickerController/ImageDataManager
-    - DKImagePickerController/Resource
-  - DKImagePickerController/ImageDataManager (4.3.9)
-  - DKImagePickerController/PhotoGallery (4.3.9):
-    - DKImagePickerController/Core
-    - DKPhotoGallery
-  - DKImagePickerController/Resource (4.3.9)
-  - DKPhotoGallery (0.0.19):
-    - DKPhotoGallery/Core (= 0.0.19)
-    - DKPhotoGallery/Model (= 0.0.19)
-    - DKPhotoGallery/Preview (= 0.0.19)
-    - DKPhotoGallery/Resource (= 0.0.19)
-    - SDWebImage
-    - SwiftyGif
-  - DKPhotoGallery/Core (0.0.19):
-    - DKPhotoGallery/Model
-    - DKPhotoGallery/Preview
-    - SDWebImage
-    - SwiftyGif
-  - DKPhotoGallery/Model (0.0.19):
-    - SDWebImage
-    - SwiftyGif
-  - DKPhotoGallery/Preview (0.0.19):
-    - DKPhotoGallery/Model
-    - DKPhotoGallery/Resource
-    - SDWebImage
-    - SwiftyGif
-  - DKPhotoGallery/Resource (0.0.19):
-    - SDWebImage
-    - SwiftyGif
-  - file_picker (0.0.1):
-    - DKImagePickerController/PhotoGallery
+  - appcheck (1.0.3):
+    - Flutter
+  - cupertino_http (0.0.1):
     - Flutter
   - Flutter (1.0.0)
-  - flutter_app_badger (1.3.0):
+  - flutter_media_metadata (0.0.1):
     - Flutter
-  - flutter_local_notifications (0.0.1):
+  - flutter_secure_storage (6.0.0):
     - Flutter
-  - flutter_native_splash (0.0.1):
+  - flutter_video_info (1.1.0):
     - Flutter
-  - flutter_secure_storage (3.3.1):
+  - keyboard_height_plugin (0.0.1):
     - Flutter
-  - flutter_webrtc (0.9.36):
-    - Flutter
-    - WebRTC-SDK (= 114.5735.08)
-  - fluttertoast (0.0.2):
-    - Flutter
-    - Toast
-  - image_cropper (0.0.4):
-    - Flutter
-    - TOCropViewController (~> 2.6.1)
-  - image_picker_ios (0.0.1):
-    - Flutter
-  - package_info_plus (0.4.5):
-    - Flutter
+  - libwebp (1.3.2):
+    - libwebp/demux (= 1.3.2)
+    - libwebp/mux (= 1.3.2)
+    - libwebp/sharpyuv (= 1.3.2)
+    - libwebp/webp (= 1.3.2)
+  - libwebp/demux (1.3.2):
+    - libwebp/webp
+  - libwebp/mux (1.3.2):
+    - libwebp/demux
+  - libwebp/sharpyuv (1.3.2)
+  - libwebp/webp (1.3.2):
+    - libwebp/sharpyuv
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
-  - permission_handler_apple (9.3.0):
-    - Flutter
-  - SDWebImage (5.19.2):
-    - SDWebImage/Core (= 5.19.2)
-  - SDWebImage/Core (5.19.2)
   - share_plus (0.0.1):
     - Flutter
   - shared_preferences_foundation (0.0.1):
@@ -73,93 +37,53 @@ PODS:
   - sqflite (0.0.3):
     - Flutter
     - FlutterMacOS
-  - sqlite3 (3.46.0):
-    - sqlite3/common (= 3.46.0)
-  - sqlite3/common (3.46.0)
-  - sqlite3/fts5 (3.46.0):
-    - sqlite3/common
-  - sqlite3/perf-threadsafe (3.46.0):
-    - sqlite3/common
-  - sqlite3/rtree (3.46.0):
-    - sqlite3/common
-  - sqlite3_flutter_libs (0.0.1):
-    - Flutter
-    - sqlite3 (~> 3.46.0)
-    - sqlite3/fts5
-    - sqlite3/perf-threadsafe
-    - sqlite3/rtree
-  - SwiftyGif (5.4.5)
-  - Toast (4.1.1)
-  - TOCropViewController (2.6.1)
-  - uni_links (0.0.1):
-    - Flutter
   - url_launcher_ios (0.0.1):
     - Flutter
-  - wakelock (0.0.1):
+  - video_player_avfoundation (0.0.1):
     - Flutter
-  - WebRTC-SDK (114.5735.08)
+    - FlutterMacOS
+  - video_thumbnail (0.0.1):
+    - Flutter
+    - libwebp
 
 DEPENDENCIES:
-  - file_picker (from `.symlinks/plugins/file_picker/ios`)
+  - appcheck (from `.symlinks/plugins/appcheck/ios`)
+  - cupertino_http (from `.symlinks/plugins/cupertino_http/ios`)
   - Flutter (from `Flutter`)
-  - flutter_app_badger (from `.symlinks/plugins/flutter_app_badger/ios`)
-  - flutter_local_notifications (from `.symlinks/plugins/flutter_local_notifications/ios`)
-  - flutter_native_splash (from `.symlinks/plugins/flutter_native_splash/ios`)
+  - flutter_media_metadata (from `.symlinks/plugins/flutter_media_metadata/ios`)
   - flutter_secure_storage (from `.symlinks/plugins/flutter_secure_storage/ios`)
-  - flutter_webrtc (from `.symlinks/plugins/flutter_webrtc/ios`)
-  - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
-  - image_cropper (from `.symlinks/plugins/image_cropper/ios`)
-  - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
-  - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
+  - flutter_video_info (from `.symlinks/plugins/flutter_video_info/ios`)
+  - keyboard_height_plugin (from `.symlinks/plugins/keyboard_height_plugin/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
-  - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
   - share_plus (from `.symlinks/plugins/share_plus/ios`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
   - social_share (from `.symlinks/plugins/social_share/ios`)
   - sqflite (from `.symlinks/plugins/sqflite/darwin`)
-  - sqlite3_flutter_libs (from `.symlinks/plugins/sqlite3_flutter_libs/ios`)
-  - uni_links (from `.symlinks/plugins/uni_links/ios`)
   - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
-  - wakelock (from `.symlinks/plugins/wakelock/ios`)
+  - video_player_avfoundation (from `.symlinks/plugins/video_player_avfoundation/darwin`)
+  - video_thumbnail (from `.symlinks/plugins/video_thumbnail/ios`)
 
 SPEC REPOS:
   trunk:
-    - DKImagePickerController
-    - DKPhotoGallery
-    - SDWebImage
-    - sqlite3
-    - SwiftyGif
-    - Toast
-    - TOCropViewController
-    - WebRTC-SDK
+    - libwebp
 
 EXTERNAL SOURCES:
-  file_picker:
-    :path: ".symlinks/plugins/file_picker/ios"
+  appcheck:
+    :path: ".symlinks/plugins/appcheck/ios"
+  cupertino_http:
+    :path: ".symlinks/plugins/cupertino_http/ios"
   Flutter:
     :path: Flutter
-  flutter_app_badger:
-    :path: ".symlinks/plugins/flutter_app_badger/ios"
-  flutter_local_notifications:
-    :path: ".symlinks/plugins/flutter_local_notifications/ios"
-  flutter_native_splash:
-    :path: ".symlinks/plugins/flutter_native_splash/ios"
+  flutter_media_metadata:
+    :path: ".symlinks/plugins/flutter_media_metadata/ios"
   flutter_secure_storage:
     :path: ".symlinks/plugins/flutter_secure_storage/ios"
-  flutter_webrtc:
-    :path: ".symlinks/plugins/flutter_webrtc/ios"
-  fluttertoast:
-    :path: ".symlinks/plugins/fluttertoast/ios"
-  image_cropper:
-    :path: ".symlinks/plugins/image_cropper/ios"
-  image_picker_ios:
-    :path: ".symlinks/plugins/image_picker_ios/ios"
-  package_info_plus:
-    :path: ".symlinks/plugins/package_info_plus/ios"
+  flutter_video_info:
+    :path: ".symlinks/plugins/flutter_video_info/ios"
+  keyboard_height_plugin:
+    :path: ".symlinks/plugins/keyboard_height_plugin/ios"
   path_provider_foundation:
     :path: ".symlinks/plugins/path_provider_foundation/darwin"
-  permission_handler_apple:
-    :path: ".symlinks/plugins/permission_handler_apple/ios"
   share_plus:
     :path: ".symlinks/plugins/share_plus/ios"
   shared_preferences_foundation:
@@ -168,45 +92,30 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/social_share/ios"
   sqflite:
     :path: ".symlinks/plugins/sqflite/darwin"
-  sqlite3_flutter_libs:
-    :path: ".symlinks/plugins/sqlite3_flutter_libs/ios"
-  uni_links:
-    :path: ".symlinks/plugins/uni_links/ios"
   url_launcher_ios:
     :path: ".symlinks/plugins/url_launcher_ios/ios"
-  wakelock:
-    :path: ".symlinks/plugins/wakelock/ios"
+  video_player_avfoundation:
+    :path: ".symlinks/plugins/video_player_avfoundation/darwin"
+  video_thumbnail:
+    :path: ".symlinks/plugins/video_thumbnail/ios"
 
 SPEC CHECKSUMS:
-  DKImagePickerController: 946cec48c7873164274ecc4624d19e3da4c1ef3c
-  DKPhotoGallery: b3834fecb755ee09a593d7c9e389d8b5d6deed60
-  file_picker: ce3938a0df3cc1ef404671531facef740d03f920
+  appcheck: e1ab9d4e03736f03e0401554a134d1ed502d7629
+  cupertino_http: 5f8b1161107fe6c8d94a0c618735a033d93fa7db
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  flutter_app_badger: b87fc231847b03b92ce1412aa351842e7e97932f
-  flutter_local_notifications: 4cde75091f6327eb8517fa068a0a5950212d2086
-  flutter_native_splash: 52501b97d1c0a5f898d687f1646226c1f93c56ef
-  flutter_secure_storage: 7953c38a04c3fdbb00571bcd87d8e3b5ceb9daec
-  flutter_webrtc: 55df3aaa802114dad390191a46c2c8d535751268
-  fluttertoast: e9a18c7be5413da53898f660530c56f35edfba9c
-  image_cropper: a3291c624a953049bc6a02e1f8c8ceb162a24b25
-  image_picker_ios: c560581cceedb403a6ff17f2f816d7fea1421fc1
-  package_info_plus: 115f4ad11e0698c8c1c5d8a689390df880f47e85
+  flutter_media_metadata: 9db7298c789a54da26e0d2f6f808fa39bfd9bcd7
+  flutter_secure_storage: d33dac7ae2ea08509be337e775f6b59f1ff45f12
+  flutter_video_info: a932e1b0da369bba95c3a14b7f61d5f8b0d03280
+  keyboard_height_plugin: 43fa8bba20fd5c4fdeed5076466b8b9d43cc6b86
+  libwebp: 1786c9f4ff8a279e4dac1e8f385004d5fc253009
   path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
-  permission_handler_apple: 9878588469a2b0d0fc1e048d9f43605f92e6cec2
-  SDWebImage: dfe95b2466a9823cf9f0c6d01217c06550d7b29a
-  share_plus: 056a1e8ac890df3e33cb503afffaf1e9b4fbae68
+  share_plus: c3fef564749587fc939ef86ffb283ceac0baf9f5
   shared_preferences_foundation: fcdcbc04712aee1108ac7fda236f363274528f78
   social_share: 702a5e3842addd22db515aa9e1e00a4b80a0296d
   sqflite: 673a0e54cc04b7d6dba8d24fb8095b31c3a99eec
-  sqlite3: 154b084339ede06960a5b3c8160066adc9176b7d
-  sqlite3_flutter_libs: 0d611efdf6d1c9297d5ab03dab21b75aeebdae31
-  SwiftyGif: 706c60cf65fa2bc5ee0313beece843c8eb8194d4
-  Toast: 1f5ea13423a1e6674c4abdac5be53587ae481c4e
-  TOCropViewController: edfd4f25713d56905ad1e0b9f5be3fbe0f59c863
-  uni_links: d97da20c7701486ba192624d99bffaaffcfc298a
   url_launcher_ios: 5334b05cef931de560670eeae103fd3e431ac3fe
-  wakelock: d0fc7c864128eac40eba1617cb5264d9c940b46f
-  WebRTC-SDK: c24d2a6c9f571f2ed42297cb8ffba9557093142b
+  video_player_avfoundation: 7c6c11d8470e1675df7397027218274b6d2360b3
+  video_thumbnail: c4e2a3c539e247d4de13cd545344fd2d26ffafd1
 
 PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
 

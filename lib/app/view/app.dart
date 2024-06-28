@@ -1,0 +1,68 @@
+import 'package:app_ui/app_ui.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:orb_mobile/app/cubit/app_base_cubit.dart';
+import 'package:orb_mobile/navigation/observer/app_navigator_observer.dart';
+import 'package:orb_mobile/router/app_router.dart';
+import 'package:provider/provider.dart';
+import 'package:user_repository/user_repository.dart';
+
+class App extends StatelessWidget {
+  const App({
+    required UserRepository userRepository,
+    super.key,
+  }) : _userRepository = userRepository;
+
+  final UserRepository _userRepository;
+
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        Provider(
+          create: (_) => AppRouter(
+            navigatorObservers: [
+              AppNavigatorObserver(),
+            ],
+          ),
+          dispose: (_, AppRouter appRouter) => appRouter.dispose(),
+        ),
+      ],
+      child: MultiRepositoryProvider(
+        providers: [
+          RepositoryProvider.value(value: _userRepository),
+        ],
+        child: MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              create: (_) => AppBaseCubit(),
+              lazy: false,
+            ),
+          ],
+          child: const AppView(),
+        ),
+      ),
+    );
+  }
+}
+
+class AppView extends StatelessWidget {
+  const AppView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final appRouter = AppRouter.of(context);
+
+    return MaterialApp.router(
+      themeMode: ThemeMode.dark,
+      theme: const AppTheme().themeData,
+      debugShowCheckedModeBanner: false,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      routerDelegate: appRouter.routerDelegate,
+      routeInformationParser: appRouter.routeInformationParser,
+      routeInformationProvider: appRouter.routeInformationProvider,
+    );
+  }
+}

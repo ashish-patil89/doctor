@@ -1,0 +1,26 @@
+name: user_repository
+description: A repository for managing feed.
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
+
+dependencies:
+  api_client:
+    path: ../api_client
+  api_models:
+    path: ../api_models
+  collection: ^1.18.0
+  equatable: ^2.0.5
+  flutter:
+    sdk: flutter
+  rxdart: ^0.27.7
+  streaming_shared_preferences: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.0
+  very_good_analysis: ^5.1.0
