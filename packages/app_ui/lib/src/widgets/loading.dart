@@ -72,11 +72,15 @@ class LoadingWidget extends StatelessWidget {
 
     switch (type) {
       case LoadingType.normal:
-        widget = RepaintBoundary(
-          child: Center(
-            child: CircularProgressIndicator.adaptive(
-              valueColor: AlwaysStoppedAnimation(
-                baseColor ?? AppColors.primaryGreen,
+        widget = SizedBox(
+          width: context.width,
+          height: context.height,
+          child: RepaintBoundary(
+            child: Center(
+              child: CircularProgressIndicator.adaptive(
+                valueColor: AlwaysStoppedAnimation(
+                  baseColor ?? AppColors.primaryGreen,
+                ),
               ),
             ),
           ),
@@ -151,6 +155,8 @@ class LoadingWidget extends StatelessWidget {
         );
     }
 
-    return widget;
+    return AbsorbPointer(
+      child: widget,
+    );
   }
 }

@@ -13,7 +13,7 @@ class LoginCubit extends Cubit<LoginState> {
     Platform localPlatform = const LocalPlatform(),
   })  : _userRepository = userRepository,
         _localPlatform = localPlatform,
-        super(const LoginState.initial()) {}
+        super(const LoginState()) {}
 
   final UserRepository _userRepository;
   final Platform _localPlatform;
@@ -26,19 +26,44 @@ class LoginCubit extends Cubit<LoginState> {
         ),
       );
 
-      await Future.delayed(const Duration(milliseconds: 10000));
-
-      emit(
-        state.copyWith(
-          loginStatus: LoginStatus.success,
-        ),
+      final success = await _userRepository.login(
+        email: state.email,
+        password: state.password,
       );
 
+      if (success) {
+        emit(
+          state.copyWith(
+            loginStatus: LoginStatus.success,
+          ),
+        );
+        return;
+      }
+      emit(
+        state.copyWith(
+          loginStatus: LoginStatus.failure,
+        ),
+      );
       return;
     } catch (error, stackTrace) {
       addError(error, stackTrace);
+
+      emit(
+        state.copyWith(
+          loginStatus: LoginStatus.failure,
+        ),
+      );
+
       return null;
     }
+  }
+
+  void updateEmail(String inputEmail) {
+    emit(state.copyWith(email: inputEmail));
+  }
+
+  void updatePassword(String password) {
+    emit(state.copyWith(password: password));
   }
 
   @override

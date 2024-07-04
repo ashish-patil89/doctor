@@ -12,9 +12,9 @@ void main() {
     required SharedPreferences sharedPreferences,
   }) async {
     final apiClient = ApiClient(
-      orbOriginUrl: '',
+      orbOriginUrl: 'https://doctor-backend-uh4gjizycq-uc.a.run.app/',
       orbUploadUrl: '',
-      orbApiBaseUrl: '',
+      orbApiBaseUrl: 'https://doctor-backend-uh4gjizycq-uc.a.run.app/',
       orbAccessToken: '',
       appVersion: '0.0.1',
     );

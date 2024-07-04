@@ -61,6 +61,7 @@ class AppTextField extends StatelessWidget {
     this.unfocusOnTapOutside = true,
     this.prefixText,
     this.prefixTextStyle,
+    this.obscureText = false,
     super.key,
   });
 
@@ -112,6 +113,7 @@ class AppTextField extends StatelessWidget {
     String? prefixText,
     TextStyle? prefixTextStyle,
     bool? showContextMenu,
+    bool? obscureText,
   }) : this._(
           key: key,
           textAlign: textAlign ?? TextAlign.left,
@@ -159,6 +161,7 @@ class AppTextField extends StatelessWidget {
           prefixText: prefixText,
           prefixTextStyle: prefixTextStyle,
           showContextMenu: showContextMenu ?? false,
+          obscureText: obscureText ?? false,
         );
 
   /// The selectable text with [ContextMenuButtonItem].
@@ -457,6 +460,9 @@ class AppTextField extends StatelessWidget {
   /// The style of prefix text.
   final TextStyle? prefixTextStyle;
 
+  /// The input text is hidden when true.
+  final bool obscureText;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -464,11 +470,12 @@ class AppTextField extends StatelessWidget {
       padding: padding ?? EdgeInsets.zero,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: backgroundColor ?? AppColors.white60,
+        color: backgroundColor ?? Colors.transparent,
         borderRadius: borderRadius ?? BorderRadius.circular(AppSpacing.md),
         border: border,
       ),
       child: TextFormField(
+        obscureText: obscureText,
         key: textFieldKey,
         initialValue: initialValue,
         onEditingComplete: onEditingComplete,
@@ -486,7 +493,7 @@ class AppTextField extends StatelessWidget {
         focusNode: focusNode,
         controller: controller,
         maxLength: maxLength,
-        maxLines: maxLines,
+        maxLines: obscureText ? 1 : maxLines,
         minLines: minLines,
         textInputAction: textInputAction ?? TextInputAction.done,
         textCapitalization: textCapitalization ?? TextCapitalization.sentences,

@@ -43,10 +43,9 @@ flutter:
   generate: true
   assets:
     - assets/animations/
-    - assets/icons/
     - assets/images/
+    - assets/icons/
     - assets/lottie/
-    - assets/videos/
   fonts:
     - family: SFProDisplay
       fonts:
@@ -65,7 +64,10 @@ flutter:
         - asset: assets/fonts/SF-Pro-Display-Medium-Italic.otf
           weight: 500
           style: italic
-
+    - family: SSProRegularDisplay
+      fonts:
+        - asset: assets/fonts/source-sans-pro-regular.ttf
+          weight: 700
 flutter_gen:
   assets:
     outputs:

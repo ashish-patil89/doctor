@@ -5,6 +5,9 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:orb_mobile/login/view/login_page.dart';
+import 'package:orb_mobile/signup/view/signup_page.dart';
+import 'package:orb_mobile/splash/splash.dart';
 
 import '../app/view/app_base.dart';
 
@@ -105,10 +108,12 @@ class AppRouter {
   static GoRouter _initializeGoRouter(
     List<NavigatorObserver> navigatorObservers,
   ) {
+    final initialLocationAndExtra = getInitialLocationAndExtra();
+
     return GoRouter(
       navigatorKey: rootNavigatorKey,
-      initialLocation: AppBaseRoute.route.path,
-      initialExtra: null,
+      initialLocation: initialLocationAndExtra.routePath,
+      initialExtra: initialLocationAndExtra.routeExtra,
       observers: navigatorObservers,
       redirect: _redirect,
       routes: _appRoutes,
@@ -130,6 +135,35 @@ class AppRouter {
       /// on top of the current navigation stack so that the user can go back
       /// to the previous route.
       overridePlatformDefaultLocation: true,
+    );
+  }
+
+  static ({String routePath, Object? routeExtra}) getInitialLocationAndExtra() {
+    //TODO(Ashish): Add check for user is logged in.
+    final isLoggedIn = false;
+
+    if (isLoggedIn) {
+      log(
+        'Showing AppBaseRoute as initial location '
+        'as the user is logged in, whitelisted and has completed onboarding.',
+        name: 'AppRouter',
+      );
+
+      return (
+        routePath: AppBaseRoute.route.path,
+        routeExtra: null,
+      );
+    }
+
+    log(
+      'Showing Login as initial location '
+      'as the user is not logged in or is not allowed.',
+      name: 'AppRouter',
+    );
+
+    return (
+      routePath: SplashRoute.route.path,
+      routeExtra: null,
     );
   }
 

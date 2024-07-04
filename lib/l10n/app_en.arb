@@ -3,5 +3,73 @@
   "appBarTitle": "Orb",
   "@appBarTitle": {
     "description": "Text shown in the AppBar of the Home Page"
+  },
+  "signIn": "Sign In",
+  "@signIn": {
+    "description": "Text shown in the AppBar of the Home Page"
+  },
+  "loginHeaderMessage": "Hi! Welcome back, you’ve been missed",
+  "@loginHeaderMessage": {
+    "description": "Text shown in the AppBar of the Home Page"
+  },
+  "email": "Email",
+  "@email": {
+    "description": "Text shown in the AppBar of the Home Page"
+  },
+  "password": "Password",
+  "@password": {
+    "description": "Text shown in the AppBar of the Home Page"
+  },
+  "forgotPassword": "Forgot Password?",
+  "@forgotPassword": {
+    "description": "Text shown in the AppBar of the Home Page"
+  },
+  "createAccount": "Create Account",
+  "@createAccount": {
+    "description": "Text shown in the AppBar of the Home Page"
+  },
+  "createAccountSignupTitle": "Create Account",
+  "@createAccountSignupTitle": {
+    "description": "Text shown in the AppBar of the Home Page"
+  },
+  "createAccountSignupSubTitle": "Fill your information below",
+  "@createAccountSignupSubTitle": {
+    "description": "Text shown in the AppBar of the Home Page"
+  },
+  "name": "Name",
+  "@name": {
+    "description": "Text shown in the AppBar of the Home Page"
+  },
+  "number": "Number",
+  "@number": {
+    "description": "Text shown in the AppBar of the Home Page"
+  },
+  "dateOfBirth": "Date of Birth",
+  "@dateOfBirth": {
+    "description": "Text shown in the AppBar of the Home Page"
+  },
+  "gender": "Gender",
+  "@gender": {
+    "description": "Text shown in the AppBar of the Home Page"
+  },
+  "male": "Male",
+  "@male": {
+    "description": "Text shown in the AppBar of the Home Page"
+  },
+  "female": "FeMale",
+  "@female": {
+    "description": "Text shown in the AppBar of the Home Page"
+  },
+  "other": "Other",
+  "@other": {
+    "description": "Text shown in the AppBar of the Home Page"
+  },
+  "agreeWith": "Agree with",
+  "@agreeWith": {
+    "description": "Text shown in the AppBar of the Home Page"
+  },
+  "termsConditions": "Terms & Condition",
+  "@termsConditions": {
+    "description": "Text shown in the AppBar of the Home Page"
   }
 }

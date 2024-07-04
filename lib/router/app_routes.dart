@@ -2,6 +2,9 @@ part of 'app_router.dart';
 
 final _appRoutes = <RouteBase>[
   AppBaseRoute.route,
+  SignupRoute.route,
+  LoginRoute.route,
+  SplashRoute.route,
 ];
 
 abstract class AppRoute extends Equatable {
@@ -35,6 +38,60 @@ class AppBaseRoute extends AppRoute {
           key: state.pageKey,
           name: state.name,
           child: const AppBase(),
+        ),
+        parentNavigatorKey: AppRouter.rootNavigatorKey,
+      );
+}
+
+class SignupRoute extends AppRoute {
+  const SignupRoute() : super();
+
+  @override
+  String get path => '/signup';
+
+  static GoRoute get route => GoRoute(
+        path: '/signup',
+        name: 'SignupPage',
+        pageBuilder: (context, state) => MaterialPage<void>(
+          key: state.pageKey,
+          name: state.name,
+          child: const SignupPage(),
+        ),
+        parentNavigatorKey: AppRouter.rootNavigatorKey,
+      );
+}
+
+class LoginRoute extends AppRoute {
+  const LoginRoute() : super();
+
+  @override
+  String get path => '/login';
+
+  static GoRoute get route => GoRoute(
+        path: '/login',
+        name: 'LoginPage',
+        pageBuilder: (context, state) => MaterialPage<void>(
+          key: state.pageKey,
+          name: state.name,
+          child: const LoginPage(),
+        ),
+        parentNavigatorKey: AppRouter.rootNavigatorKey,
+      );
+}
+
+class SplashRoute extends AppRoute {
+  const SplashRoute() : super();
+
+  @override
+  String get path => '/splash';
+
+  static GoRoute get route => GoRoute(
+        path: '/splash',
+        name: 'SplashPage',
+        pageBuilder: (context, state) => MaterialPage<void>(
+          key: state.pageKey,
+          name: state.name,
+          child: const SplashPage(),
         ),
         parentNavigatorKey: AppRouter.rootNavigatorKey,
       );

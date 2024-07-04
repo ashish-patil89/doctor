@@ -8,70 +8,9 @@
 // ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
 
 import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
-
-class $AssetsAnimationsGen {
-  const $AssetsAnimationsGen();
-
-  /// File path: assets/animations/claim_handle_animation_stroke_1.svg
-  SvgGenImage get claimHandleAnimationStroke1 => const SvgGenImage(
-      'assets/animations/claim_handle_animation_stroke_1.svg');
-
-  /// File path: assets/animations/claim_handle_animation_stroke_2.svg
-  SvgGenImage get claimHandleAnimationStroke2 => const SvgGenImage(
-      'assets/animations/claim_handle_animation_stroke_2.svg');
-
-  /// File path: assets/animations/claim_handle_animation_stroke_3.svg
-  SvgGenImage get claimHandleAnimationStroke3 => const SvgGenImage(
-      'assets/animations/claim_handle_animation_stroke_3.svg');
-
-  /// File path: assets/animations/claim_handle_animation_stroke_4.svg
-  SvgGenImage get claimHandleAnimationStroke4 => const SvgGenImage(
-      'assets/animations/claim_handle_animation_stroke_4.svg');
-
-  /// File path: assets/animations/claim_handle_animation_stroke_success.svg
-  SvgGenImage get claimHandleAnimationStrokeSuccess => const SvgGenImage(
-      'assets/animations/claim_handle_animation_stroke_success.svg');
-
-  /// File path: assets/animations/claim_handle_animation_tick.svg
-  SvgGenImage get claimHandleAnimationTick =>
-      const SvgGenImage('assets/animations/claim_handle_animation_tick.svg');
-
-  /// List of all assets
-  List<SvgGenImage> get values => [
-        claimHandleAnimationStroke1,
-        claimHandleAnimationStroke2,
-        claimHandleAnimationStroke3,
-        claimHandleAnimationStroke4,
-        claimHandleAnimationStrokeSuccess,
-        claimHandleAnimationTick
-      ];
-}
-
-class $AssetsBadgesGen {
-  const $AssetsBadgesGen();
-
-  /// File path: assets/badges/orb_g.svg
-  SvgGenImage get orbG => const SvgGenImage('assets/badges/orb_g.svg');
-
-  /// File path: assets/badges/orb_g_feed.svg
-  SvgGenImage get orbGFeed => const SvgGenImage('assets/badges/orb_g_feed.svg');
-
-  /// File path: assets/badges/orb_g_gear.svg
-  SvgGenImage get orbGGear => const SvgGenImage('assets/badges/orb_g_gear.svg');
-
-  /// File path: assets/badges/orb_g_gear_outline.svg
-  SvgGenImage get orbGGearOutline =>
-      const SvgGenImage('assets/badges/orb_g_gear_outline.svg');
-
-  /// File path: assets/badges/orb_g_leaf.svg
-  SvgGenImage get orbGLeaf => const SvgGenImage('assets/badges/orb_g_leaf.svg');
-
-  /// List of all assets
-  List<SvgGenImage> get values =>
-      [orbG, orbGFeed, orbGGear, orbGGearOutline, orbGLeaf];
-}
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:vector_graphics/vector_graphics.dart';
 
 class $AssetsIconsGen {
   const $AssetsIconsGen();
@@ -168,6 +107,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/bonsai_logo.png
   AssetGenImage get bonsaiLogo =>
       const AssetGenImage('assets/icons/bonsai_logo.png');
+
+  /// File path: assets/icons/calendar.svg
+  SvgGenImage get calendar => const SvgGenImage('assets/icons/calendar.svg');
 
   /// File path: assets/icons/camera.svg
   SvgGenImage get camera => const SvgGenImage('assets/icons/camera.svg');
@@ -689,9 +631,6 @@ class $AssetsIconsGen {
   SvgGenImage get selectedArrow =>
       const SvgGenImage('assets/icons/selected_arrow.svg');
 
-  /// File path: assets/icons/send.svg
-  SvgGenImage get send => const SvgGenImage('assets/icons/send.svg');
-
   /// File path: assets/icons/setting.svg
   SvgGenImage get setting => const SvgGenImage('assets/icons/setting.svg');
 
@@ -754,8 +693,11 @@ class $AssetsIconsGen {
   SvgGenImage get textfieldSuccess =>
       const SvgGenImage('assets/icons/textfield_success.svg');
 
-  /// File path: assets/icons/tips.svg
-  SvgGenImage get tips => const SvgGenImage('assets/icons/tips.svg');
+  /// File path: assets/icons/tip.png
+  AssetGenImage get tip => const AssetGenImage('assets/icons/tip.png');
+
+  /// File path: assets/icons/tip_arrow.svg
+  SvgGenImage get tipArrow => const SvgGenImage('assets/icons/tip_arrow.svg');
 
   /// File path: assets/icons/token.svg
   SvgGenImage get token => const SvgGenImage('assets/icons/token.svg');
@@ -845,6 +787,7 @@ class $AssetsIconsGen {
         block,
         blockMember,
         bonsaiLogo,
+        calendar,
         camera,
         caretUp,
         caretdown,
@@ -999,7 +942,6 @@ class $AssetsIconsGen {
         saveIcon,
         search,
         selectedArrow,
-        send,
         setting,
         settingLight,
         settings,
@@ -1018,7 +960,8 @@ class $AssetsIconsGen {
         text,
         textfieldError,
         textfieldSuccess,
-        tips,
+        tip,
+        tipArrow,
         token,
         twitter,
         unarchive,
@@ -1042,43 +985,15 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
-  /// File path: assets/images/user_avatar_1.png
-  AssetGenImage get userAvatar1 =>
-      const AssetGenImage('assets/images/user_avatar_1.png');
+  /// File path: assets/images/logo-splash.png
+  AssetGenImage get logoSplash =>
+      const AssetGenImage('assets/images/logo-splash.png');
 
-  /// File path: assets/images/user_avatar_2.png
-  AssetGenImage get userAvatar2 =>
-      const AssetGenImage('assets/images/user_avatar_2.png');
-
-  /// File path: assets/images/user_avatar_3.png
-  AssetGenImage get userAvatar3 =>
-      const AssetGenImage('assets/images/user_avatar_3.png');
-
-  /// File path: assets/images/user_avatar_4.png
-  AssetGenImage get userAvatar4 =>
-      const AssetGenImage('assets/images/user_avatar_4.png');
-
-  /// File path: assets/images/user_avatar_5.png
-  AssetGenImage get userAvatar5 =>
-      const AssetGenImage('assets/images/user_avatar_5.png');
-
-  /// File path: assets/images/user_background_1.jpeg
-  AssetGenImage get userBackground1 =>
-      const AssetGenImage('assets/images/user_background_1.jpeg');
-
-  /// File path: assets/images/zora.png
-  AssetGenImage get zora => const AssetGenImage('assets/images/zora.png');
+  /// File path: assets/images/logo.png
+  AssetGenImage get logo => const AssetGenImage('assets/images/logo.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [
-        userAvatar1,
-        userAvatar2,
-        userAvatar3,
-        userAvatar4,
-        userAvatar5,
-        userBackground1,
-        zora
-      ];
+  List<AssetGenImage> get values => [logoSplash, logo];
 }
 
 class $AssetsLottieGen {
@@ -1097,31 +1012,29 @@ class $AssetsLottieGen {
   List<String> get values => [confettie, orbLogo, postLike];
 }
 
-class $AssetsVideosGen {
-  const $AssetsVideosGen();
-
-  /// File path: assets/videos/intro.mp4
-  String get intro => 'packages/app_ui/assets/videos/intro.mp4';
-
-  /// List of all assets
-  List<String> get values => [intro];
-}
-
 class Assets {
   Assets._();
 
-  static const $AssetsAnimationsGen animations = $AssetsAnimationsGen();
-  static const $AssetsBadgesGen badges = $AssetsBadgesGen();
+  static const String package = 'app_ui';
+
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsLottieGen lottie = $AssetsLottieGen();
-  static const $AssetsVideosGen videos = $AssetsVideosGen();
 }
 
 class AssetGenImage {
-  const AssetGenImage(this._assetName);
+  const AssetGenImage(
+    this._assetName, {
+    this.size,
+    this.flavors = const {},
+  });
 
   final String _assetName;
+
+  static const String package = 'app_ui';
+
+  final Size? size;
+  final Set<String> flavors;
 
   Image image({
     Key? key,
@@ -1143,7 +1056,8 @@ class AssetGenImage {
     bool matchTextDirection = false,
     bool gaplessPlayback = false,
     bool isAntiAlias = false,
-    String? package = 'app_ui',
+    @Deprecated('Do not specify package for a generated library asset')
+    String? package = package,
     FilterQuality filterQuality = FilterQuality.low,
     int? cacheWidth,
     int? cacheHeight,
@@ -1178,7 +1092,8 @@ class AssetGenImage {
 
   ImageProvider provider({
     AssetBundle? bundle,
-    String? package = 'app_ui',
+    @Deprecated('Do not specify package for a generated library asset')
+    String? package = package,
   }) {
     return AssetImage(
       _assetName,
@@ -1193,15 +1108,31 @@ class AssetGenImage {
 }
 
 class SvgGenImage {
-  const SvgGenImage(this._assetName);
+  const SvgGenImage(
+    this._assetName, {
+    this.size,
+    this.flavors = const {},
+  }) : _isVecFormat = false;
+
+  const SvgGenImage.vec(
+    this._assetName, {
+    this.size,
+    this.flavors = const {},
+  }) : _isVecFormat = true;
 
   final String _assetName;
+  final Size? size;
+  final Set<String> flavors;
+  final bool _isVecFormat;
+
+  static const String package = 'app_ui';
 
   SvgPicture svg({
     Key? key,
     bool matchTextDirection = false,
     AssetBundle? bundle,
-    String? package = 'app_ui',
+    @Deprecated('Do not specify package for a generated library asset')
+    String? package = package,
     double? width,
     double? height,
     BoxFit fit = BoxFit.contain,
@@ -1210,19 +1141,32 @@ class SvgGenImage {
     WidgetBuilder? placeholderBuilder,
     String? semanticsLabel,
     bool excludeFromSemantics = false,
-    SvgTheme theme = const SvgTheme(),
+    SvgTheme? theme,
     ColorFilter? colorFilter,
     Clip clipBehavior = Clip.hardEdge,
     @deprecated Color? color,
     @deprecated BlendMode colorBlendMode = BlendMode.srcIn,
     @deprecated bool cacheColorFilter = false,
   }) {
-    return SvgPicture.asset(
-      _assetName,
+    final BytesLoader loader;
+    if (_isVecFormat) {
+      loader = AssetBytesLoader(
+        _assetName,
+        assetBundle: bundle,
+        packageName: package,
+      );
+    } else {
+      loader = SvgAssetLoader(
+        _assetName,
+        assetBundle: bundle,
+        packageName: package,
+        theme: theme,
+      );
+    }
+    return SvgPicture(
+      loader,
       key: key,
       matchTextDirection: matchTextDirection,
-      bundle: bundle,
-      package: package,
       width: width,
       height: height,
       fit: fit,
@@ -1231,10 +1175,8 @@ class SvgGenImage {
       placeholderBuilder: placeholderBuilder,
       semanticsLabel: semanticsLabel,
       excludeFromSemantics: excludeFromSemantics,
-      theme: theme,
-      colorFilter: colorFilter,
-      color: color,
-      colorBlendMode: colorBlendMode,
+      colorFilter: colorFilter ??
+          (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
       clipBehavior: clipBehavior,
       cacheColorFilter: cacheColorFilter,
     );

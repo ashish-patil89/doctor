@@ -13,11 +13,42 @@ class UserRepository {
 
   final ApiClient _apiClient;
 
-  Future<void> getUsers({
-    required String publicationId,
+  /// Login user with [email , password]
+  Future<bool> signup({
+    required String email,
+    required String password,
+    required String name,
+    required int phone,
+    required String dob,
+    required String role,
   }) async {
     try {
-      await _apiClient.config.getUsers();
+      final success = await _apiClient.user.signup(
+        email: email,
+        password: password,
+        name: name,
+        phone: phone,
+        role: role,
+      );
+
+      return success;
+    } catch (error, stackTrace) {
+      handleApiError(error, stackTrace);
+    }
+  }
+
+  /// Login user with [email , password]
+  Future<bool> login({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      final success = await _apiClient.user.login(
+        email: email,
+        password: password,
+      );
+
+      return success;
     } catch (error, stackTrace) {
       handleApiError(error, stackTrace);
     }

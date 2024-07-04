@@ -14,14 +14,26 @@ class UserResource {
 
   final Dio _orbApiClient;
 
-  /// Gets available communities for the given [memberOnly],
-  /// [limit], [cursor], and [thumbnailDimension].
-  ///
-  /// {@macro api_error_handling}
-  Future<bool> getUsers() async {
+  /// Signup user with providing email,password,name,phone,role.
+  Future<bool> signup({
+    required String email,
+    required String password,
+    required String name,
+    required int phone,
+    required String role,
+  }) async {
     try {
-      final response = await _orbApiClient.get<Map<String, dynamic>>(
-        'users',
+      final request = {
+        'email': email,
+        'password': password,
+        'name': name,
+        'phone': phone,
+        'role': role,
+      };
+
+      final response = await _orbApiClient.post<Map<String, dynamic>>(
+        'api/v1/auth/signup',
+        data: request,
       );
 
       log('[CommunityResource] getCommunities response: ${response.data}');
@@ -29,6 +41,32 @@ class UserResource {
       return true;
     } catch (error, stackTrace) {
       handleApiError(error, stackTrace);
+      return false;
+    }
+  }
+
+  /// Login user with providing email,password,name,phone,role.
+  Future<bool> login({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      final request = {
+        'email': email,
+        'password': password,
+      };
+
+      final response = await _orbApiClient.post<Map<String, dynamic>>(
+        'api/v1/auth/login',
+        data: request,
+      );
+
+      log('[CommunityResource] getCommunities response: ${response.data}');
+
+      return true;
+    } catch (error, stackTrace) {
+      handleApiError(error, stackTrace);
+      return false;
     }
   }
 }

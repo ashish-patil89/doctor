@@ -5,11 +5,20 @@ abstract class AppColors {
   /// The primary black color.
   static const Color primaryBlack = Color.fromRGBO(0, 0, 0, 1);
 
+  /// The secondary black color.
+  static const Color secondaryBlack = Color.fromRGBO(121, 121, 121, 1);
+
+  /// The white 60% color.
+  static const Color whiteBorder = Color.fromRGBO(233, 233, 233, 1);
+
   /// The primary white color.
   static const Color primaryWhite = Color.fromRGBO(255, 255, 255, 1);
 
   /// The primary orange color.
   static const Color primaryGreen = Color.fromRGBO(0, 132, 101, 1);
+
+  /// The primary orange light color.
+  static const Color primaryOrange = Color.fromRGBO(239, 160, 95, 1);
 
   /// The primary orange light color.
   static const Color primaryOrangeLight = Color.fromRGBO(255, 143, 80, 0.2);

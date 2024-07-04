@@ -19,11 +19,11 @@ abstract class AppTextStyles {
   /// The Headline 1 text style.
   static const TextStyle headline1 = TextStyle(
     package: 'app_ui',
-    fontFamily: AppFontFamilies.sfProDisplay,
+    fontFamily: AppFontFamilies.ssProRegularDisplay,
     textBaseline: TextBaseline.alphabetic,
     decoration: TextDecoration.none,
     fontWeight: AppFontWeights.bold,
-    fontSize: 24,
+    fontSize: 26,
     height: 28.64 / 24.0,
     fontFeatures: _fontFeatures,
   );
@@ -108,7 +108,7 @@ abstract class AppTextStyles {
   /// The Callout text style.
   static const TextStyle callout = TextStyle(
     package: 'app_ui',
-    fontFamily: AppFontFamilies.sfProDisplay,
+    fontFamily: AppFontFamilies.ssProRegularDisplay,
     textBaseline: TextBaseline.alphabetic,
     decoration: TextDecoration.none,
     fontWeight: AppFontWeights.medium,

@@ -36,7 +36,7 @@ class ApiClient {
   final Dio _orbApiClient;
 
   /// The resource for interacting with the Config API.
-  late final config = UserResource(
+  late final user = UserResource(
     orbApiClient: _orbApiClient,
   );
 }

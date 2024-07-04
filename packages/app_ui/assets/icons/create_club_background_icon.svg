@@ -1,0 +1,16 @@
+<svg width="393" height="208" viewBox="0 0 393 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="-13.5" y="0.5" width="99" height="99" rx="21.5" stroke="white" stroke-opacity="0.04"/>
+<rect x="93.5" y="0.5" width="99" height="99" rx="21.5" stroke="white" stroke-opacity="0.04"/>
+<rect x="200.5" y="0.5" width="99" height="99" rx="21.5" stroke="white" stroke-opacity="0.04"/>
+<rect x="307.5" y="0.5" width="99" height="99" rx="21.5" stroke="white" stroke-opacity="0.04"/>
+<rect x="-87.5" y="108.5" width="99" height="99" rx="21.5" stroke="white" stroke-opacity="0.04"/>
+<rect x="19.5" y="108.5" width="99" height="99" rx="21.5" stroke="white" stroke-opacity="0.04"/>
+<rect x="233.5" y="108.5" width="99" height="99" rx="21.5" stroke="white" stroke-opacity="0.04"/>
+<rect x="340.5" y="108.5" width="99" height="99" rx="21.5" stroke="white" stroke-opacity="0.04"/>
+<rect x="127" y="109" width="98" height="98" rx="21" stroke="white" stroke-opacity="0.08" stroke-width="2"/>
+<circle cx="176" cy="158" r="47.5" stroke="#252424"/>
+<line x1="176" y1="111" x2="176" y2="205" stroke="#252424"/>
+<line x1="218.354" y1="116.354" x2="134.354" y2="200.354" stroke="#252424"/>
+<line y1="-0.5" x2="118.794" y2="-0.5" transform="matrix(0.707107 0.707107 0.707107 -0.707107 134 116)" stroke="#252424"/>
+<line x1="223" y1="158.5" x2="129" y2="158.5" stroke="#252424"/>
+</svg>

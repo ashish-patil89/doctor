@@ -3,9 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:orb_mobile/app/cubit/app_base_cubit.dart';
+import 'package:orb_mobile/deep_links/deep_links.dart';
+import 'package:orb_mobile/login/cubit/login_cubit.dart';
 import 'package:orb_mobile/navigation/observer/app_navigator_observer.dart';
 import 'package:orb_mobile/router/app_router.dart';
+import 'package:orb_mobile/signup/cubit/cubit.dart';
 import 'package:provider/provider.dart';
+import 'package:rxdart/rxdart.dart';
 import 'package:user_repository/user_repository.dart';
 
 class App extends StatelessWidget {
@@ -39,8 +43,29 @@ class App extends StatelessWidget {
               create: (_) => AppBaseCubit(),
               lazy: false,
             ),
+            BlocProvider(
+              create: (_) => LoginCubit(
+                userRepository: _userRepository,
+              ),
+              lazy: false,
+            ),
+            BlocProvider(
+              create: (_) => SignupCubit(
+                userRepository: _userRepository,
+              ),
+              lazy: false,
+            ),
+            BlocProvider(
+              create: (_) => DeepLinksCubit(
+                routeUriStream: ConcatStream([]), //TODO Ashish
+                userRepository: _userRepository,
+              ),
+              lazy: false,
+            ),
           ],
-          child: const AppView(),
+          child: DeepLinksListener(
+            child: const AppView(),
+          ),
         ),
       ),
     );

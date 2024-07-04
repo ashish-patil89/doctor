@@ -10,6 +10,7 @@ class AppButtonOutlined extends StatelessWidget {
     required this.title,
     required this.minimumSize,
     super.key,
+    this.maximumSize,
     this.icon,
     this.suffixChild,
     this.iconPadding,
@@ -27,6 +28,7 @@ class AppButtonOutlined extends StatelessWidget {
     this.secondary,
     this.animate,
     this.subtitle,
+    this.textAlignment,
   })  : buttonColor = buttonColor ?? AppColors.menu,
         disabledButtonColor = disabledButtonColor ?? AppColors.white12,
         foregroundColor = foregroundColor ?? AppColors.primaryWhite,
@@ -51,9 +53,11 @@ class AppButtonOutlined extends StatelessWidget {
     Color? buttonColor,
     BorderRadius? borderRadius,
     Size? minSize,
+    Size? maxSize,
     bool? animate,
     Widget? secondary,
     BorderSide? borderSide,
+    Alignment? textAlignment,
   }) : this._(
           key: key,
           title: title ?? const SizedBox(),
@@ -77,6 +81,7 @@ class AppButtonOutlined extends StatelessWidget {
                   AppSpacing.spacing108,
                 ),*/
           minimumSize: minSize ?? const Size(0, 45),
+          maximumSize: maxSize ?? const Size(double.infinity, 45),
           onPressed: onPressed,
           buttonColor: buttonColor ?? AppColors.menu,
           foregroundColor: AppColors.primaryWhite,
@@ -92,8 +97,9 @@ class AppButtonOutlined extends StatelessWidget {
           secondary: secondary,
           borderSide: borderSide ??
               const BorderSide(
-                color: AppColors.menu,
+                color: AppColors.secondaryBlack,
               ),
+          textAlignment: textAlignment ?? Alignment.center,
         );
 
   /// The [VoidCallback] called when this button is pressed.
@@ -138,6 +144,9 @@ class AppButtonOutlined extends StatelessWidget {
   /// The minimum size of this button.
   final Size minimumSize;
 
+  /// The maximum size of this button.
+  final Size? maximumSize;
+
   /// The padding of this button.
   ///
   /// Defaults to [EdgeInsets.zero].
@@ -170,6 +179,9 @@ class AppButtonOutlined extends StatelessWidget {
   /// The animation on button press.
   final bool? animate;
 
+  /// The text alignment on button.
+  final Alignment? textAlignment;
+
   static const _transitionAnimationDuration = Duration(milliseconds: 300);
 
   @override
@@ -181,6 +193,8 @@ class AppButtonOutlined extends StatelessWidget {
         constraints: BoxConstraints(
           minWidth: minimumSize.width,
           minHeight: minimumSize.height,
+          maxWidth: maximumSize?.width ?? double.infinity,
+          maxHeight: maximumSize?.height ?? double.infinity,
         ),
         child: OutlinedButton(
           onPressed: onPressed,
@@ -212,6 +226,7 @@ class AppButtonOutlined extends StatelessWidget {
             overlayColor: MaterialStateProperty.all(Colors.transparent),
           ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
                 children: [
@@ -244,7 +259,7 @@ class AppButtonOutlined extends StatelessWidget {
                               );
                             },
                             child: Align(
-                              alignment: Alignment.centerLeft,
+                              alignment: textAlignment ?? Alignment.center,
                               key: Key('${title.key}_container'),
                               child: Padding(
                                 padding: iconPadding ??
