@@ -26,16 +26,14 @@ class SignupCubit extends Cubit<SignupState> {
         ),
       );
 
-      final success = await _userRepository.signup(
+      final error = await _userRepository.signup(
         email: state.email!,
         password: state.password!,
         name: state.name!,
-        dob: state.dob!,
-        phone: state.phone!,
-        role: 'user',
+        role: 'doctor',
       );
 
-      if (success) {
+      if (error.isNotEmpty) {
         emit(
           state.copyWith(
             loginStatus: SignupStatus.success,
@@ -50,14 +48,27 @@ class SignupCubit extends Cubit<SignupState> {
       );
       return;
     } catch (error, stackTrace) {
-      addError(error, stackTrace);
-
-      emit(
-        state.copyWith(
-          loginStatus: SignupStatus.failure,
-        ),
-      );
-
+      if (error is SignupFailedFailure) {
+        emit(
+          state.copyWith(
+            signupInvalid: error.error as String,
+          ),
+        );
+      }
+      if (error is EmailFailedFailure) {
+        emit(
+          state.copyWith(
+            emailInvalid: error.error as String,
+          ),
+        );
+      }
+      if (error is PasswordFailedFailure) {
+        emit(
+          state.copyWith(
+            passwordInvalid: error.error as String,
+          ),
+        );
+      }
       return null;
     }
   }
@@ -70,24 +81,21 @@ class SignupCubit extends Cubit<SignupState> {
     emit(state.copyWith(password: password));
   }
 
-  void updateDob(String dob) {
-    emit(state.copyWith(dob: dob));
-  }
-
   void updateName(String name) {
     emit(state.copyWith(name: name));
   }
 
-  void updatePhone(int? phone) {
-    emit(state.copyWith(phone: phone));
-  }
-
-  void updateGender(Gender gender) {
-    emit(state.copyWith(gender: gender));
-  }
-
   void updateAgreeOnTerms(bool? agreed) {
     emit(state.copyWith(agreedOnTerms: agreed));
+  }
+
+  void resetErrors() {
+    emit(
+      state.copyWith(
+        emailInvalid: '',
+        passwordInvalid: '',
+      ),
+    );
   }
 
   @override

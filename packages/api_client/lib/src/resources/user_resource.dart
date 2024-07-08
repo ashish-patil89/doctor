@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'dart:math' hide log;
 
 import 'package:api_client/api_client.dart';
 import 'package:dio/dio.dart';
@@ -15,11 +16,10 @@ class UserResource {
   final Dio _orbApiClient;
 
   /// Signup user with providing email,password,name,phone,role.
-  Future<bool> signup({
+  Future<String> signup({
     required String email,
     required String password,
     required String name,
-    required int phone,
     required String role,
   }) async {
     try {
@@ -27,8 +27,8 @@ class UserResource {
         'email': email,
         'password': password,
         'name': name,
-        'phone': phone,
         'role': role,
+        'phone': generateRandom20DigitNumber(),
       };
 
       final response = await _orbApiClient.post<Map<String, dynamic>>(
@@ -36,13 +36,23 @@ class UserResource {
         data: request,
       );
 
-      log('[CommunityResource] getCommunities response: ${response.data}');
+      log('');
 
-      return true;
-    } catch (error, stackTrace) {
+      return '';
+    } on DioException catch (error, stackTrace) {
       handleApiError(error, stackTrace);
-      return false;
     }
+  }
+
+  ///
+  int generateRandom20DigitNumber() {
+    final random = Random();
+    // Generate 20 random digits and concatenate them into a string
+    var randomNumber = '';
+    for (var i = 0; i < 10; i++) {
+      randomNumber += random.nextInt(10).toString();
+    }
+    return int.parse(randomNumber);
   }
 
   /// Login user with providing email,password,name,phone,role.

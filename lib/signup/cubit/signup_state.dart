@@ -19,10 +19,10 @@ final class SignupState extends Equatable {
     this.email,
     this.password,
     this.name,
-    this.phone,
-    this.dob,
-    this.gender = Gender.male,
     this.agreedOnTerms = false,
+    this.signupInvalid,
+    this.emailInvalid,
+    this.passwordInvalid,
   });
 
   /// The status of [feedPublications].
@@ -31,10 +31,10 @@ final class SignupState extends Equatable {
   final String? email;
   final String? password;
   final String? name;
-  final int? phone;
-  final String? dob;
-  final Gender gender;
   final bool agreedOnTerms;
+  final String? signupInvalid;
+  final String? emailInvalid;
+  final String? passwordInvalid;
 
   @override
   List<Object?> get props => [
@@ -42,10 +42,10 @@ final class SignupState extends Equatable {
         email,
         password,
         name,
-        phone,
-        dob,
-        gender,
         agreedOnTerms,
+        signupInvalid,
+        emailInvalid,
+        passwordInvalid,
       ];
 
   SignupState copyWith({
@@ -53,20 +53,20 @@ final class SignupState extends Equatable {
     String? email,
     String? password,
     String? name,
-    int? phone,
-    String? dob,
-    Gender? gender,
     bool? agreedOnTerms,
+    String? signupInvalid,
+    String? emailInvalid,
+    String? passwordInvalid,
   }) {
     return SignupState(
       signupStatus: loginStatus ?? this.signupStatus,
       email: email ?? this.email,
       password: password ?? this.password,
       name: name ?? this.name,
-      phone: phone ?? this.phone,
-      dob: dob ?? this.dob,
-      gender: gender ?? this.gender,
       agreedOnTerms: agreedOnTerms ?? this.agreedOnTerms,
+      signupInvalid: signupInvalid ?? this.signupInvalid,
+      emailInvalid: emailInvalid ?? this.emailInvalid,
+      passwordInvalid: passwordInvalid ?? this.passwordInvalid,
     );
   }
 }
