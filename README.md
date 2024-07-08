@@ -125,3 +125,6 @@ Alternatively, run `flutter run` and code generation will take place automatical
 
 [flutter_localizations_link]: https://api.flutter.dev/flutter/flutter_localizations/flutter_localizations-library.html
 [internationalization_link]: https://flutter.dev/docs/development/accessibility-and-localization/internationalization
+
+
+flutter pub run build_runner build --delete-conflicting-outputs
