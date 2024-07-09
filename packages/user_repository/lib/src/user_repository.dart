@@ -1,10 +1,18 @@
 // ignore_for_file: lines_longer_than_80_chars
 
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:api_client/api_client.dart';
+import 'package:storage/storage.dart';
 import 'package:user_repository/src/failure.dart';
 import 'package:user_repository/user_repository.dart';
+
+/// Storage keys for [TokenStorage].
+abstract class TokenStorageKeys {
+  /// The storage key for a [Token].
+  static const token = '__token_key__';
+}
 
 /// {@template feed_repository}
 /// A repository for managing feed.
@@ -13,9 +21,23 @@ class UserRepository {
   /// {@macro feed_repository}
   UserRepository({
     required ApiClient apiClient,
-  }) : _apiClient = apiClient;
+    required Storage storage,
+  })  : _apiClient = apiClient,
+        _storage = storage;
 
   final ApiClient _apiClient;
+  final Storage _storage;
+
+  /// To check the access token in there in storage.
+  Future<String?> getAccessToken() async {
+    try {
+      return _storage.read(
+        key: TokenStorageKeys.token,
+      );
+    } catch (error, stackTrace) {
+      handleApiError(error, stackTrace);
+    }
+  }
 
   /// Login user with [email , password]
   Future<String> signup({
@@ -77,17 +99,21 @@ class UserRepository {
   }
 
   /// Login user with [email , password]
-  Future<bool> login({
+  Future<String?> login({
     required String email,
     required String password,
   }) async {
     try {
-      final success = await _apiClient.user.login(
+      final token = await _apiClient.user.login(
         email: email,
         password: password,
       );
 
-      return success;
+      await _storage.write(
+        key: TokenStorageKeys.token,
+        value: json.encode(token),
+      );
+      return token;
     } catch (error, stackTrace) {
       handleApiError(error, stackTrace);
     }

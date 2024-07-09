@@ -1011,6 +1011,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.1"
+  persistent_storage:
+    dependency: "direct main"
+    description:
+      path: "packages/storage/persistent_storage"
+      relative: true
+    source: path
+    version: "0.1.0+1"
   petitparser:
     dependency: transitive
     description:
@@ -1101,6 +1108,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.27.7"
+  secure_storage:
+    dependency: "direct main"
+    description:
+      path: "packages/storage/secure_storage"
+      relative: true
+    source: path
+    version: "0.1.0+1"
   share_plus:
     dependency: "direct main"
     description:
@@ -1298,6 +1312,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.2"
+  storage:
+    dependency: transitive
+    description:
+      path: "packages/storage/storage"
+      relative: true
+    source: path
+    version: "0.1.0+1"
   stream_channel:
     dependency: transitive
     description:

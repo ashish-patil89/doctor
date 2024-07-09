@@ -48,6 +48,9 @@ class $AssetsIconsGen {
   SvgGenImage get allWallets =>
       const SvgGenImage('assets/icons/all_wallets.svg');
 
+  /// Directory path: assets/icons/app
+  $AssetsIconsAppGen get app => const $AssetsIconsAppGen();
+
   /// File path: assets/icons/archive.svg
   SvgGenImage get archive => const SvgGenImage('assets/icons/archive.svg');
 
@@ -1010,6 +1013,16 @@ class $AssetsLottieGen {
 
   /// List of all assets
   List<String> get values => [confettie, orbLogo, postLike];
+}
+
+class $AssetsIconsAppGen {
+  const $AssetsIconsAppGen();
+
+  /// File path: assets/icons/app/test.svg
+  SvgGenImage get test => const SvgGenImage('assets/icons/app/test.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [test];
 }
 
 class Assets {

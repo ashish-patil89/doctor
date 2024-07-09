@@ -5,6 +5,7 @@ final _appRoutes = <RouteBase>[
   SignupRoute.route,
   LoginRoute.route,
   SplashRoute.route,
+  HomeRoute.route,
 ];
 
 abstract class AppRoute extends Equatable {
@@ -92,6 +93,24 @@ class SplashRoute extends AppRoute {
           key: state.pageKey,
           name: state.name,
           child: const SplashPage(),
+        ),
+        parentNavigatorKey: AppRouter.rootNavigatorKey,
+      );
+}
+
+class HomeRoute extends AppRoute {
+  const HomeRoute() : super();
+
+  @override
+  String get path => '/home';
+
+  static GoRoute get route => GoRoute(
+        path: '/home',
+        name: 'HomePage',
+        pageBuilder: (context, state) => MaterialPage<void>(
+          key: state.pageKey,
+          name: state.name,
+          child: const HomePage(),
         ),
         parentNavigatorKey: AppRouter.rootNavigatorKey,
       );

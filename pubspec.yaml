@@ -15,6 +15,8 @@ dependencies:
     path: packages/app_ui
   user_repository:
     path: packages/user_repository
+  secure_storage:
+    path: packages/storage/secure_storage
   appcheck: ^1.1.0
   async: ^2.11.0
   auto_size_text: ^3.0.0
@@ -40,6 +42,8 @@ dependencies:
   flutter_markdown: ^0.6.20
   flutter_media_metadata: ^1.0.0+1
   flutter_secure_storage: ^9.0.0
+  persistent_storage:
+    path: packages/storage/persistent_storage
   flutter_styled_toast: ^2.2.1
   flutter_svg: ^2.0.9
   # Pointing to a fork of flutter_swipe_detector to fix the following issue:

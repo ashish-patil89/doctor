@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:orb_mobile/router/app_router.dart';
 import 'package:orb_mobile/splash/cubit/splash_cubit.dart';
+import 'package:user_repository/user_repository.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({
@@ -12,7 +13,9 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => SplashCubit()..init(),
+      create: (_) => SplashCubit(
+        userRepository: context.read<UserRepository>(),
+      )..init(),
       child: const SplashView(),
     );
     ;
@@ -47,9 +50,15 @@ class _SplashViewState extends State<SplashView> {
     return BlocListener<SplashCubit, SplashState>(
       listener: (context, state) {
         if (state.splashStatus == SplashStatus.success) {
-          AppRouter.of(context).push(
-            const LoginRoute(),
-          );
+          if (state.isValidSession) {
+            AppRouter.of(context).push(
+              const HomeRoute(),
+            );
+          } else {
+            AppRouter.of(context).push(
+              const LoginRoute(),
+            );
+          }
         }
       },
       listenWhen: (previous, current) {

@@ -56,7 +56,7 @@ class UserResource {
   }
 
   /// Login user with providing email,password,name,phone,role.
-  Future<bool> login({
+  Future<String?> login({
     required String email,
     required String password,
   }) async {
@@ -71,12 +71,15 @@ class UserResource {
         data: request,
       );
 
-      log('[CommunityResource] getCommunities response: ${response.data}');
+      log('[UserResource] login response: ${response.data}');
 
-      return true;
+      final data = response.data;
+      if (data != null) {
+        return data['access_token'] as String;
+      }
+      return null;
     } catch (error, stackTrace) {
       handleApiError(error, stackTrace);
-      return false;
     }
   }
 }

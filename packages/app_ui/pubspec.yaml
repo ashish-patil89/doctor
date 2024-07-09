@@ -45,6 +45,7 @@ flutter:
     - assets/animations/
     - assets/images/
     - assets/icons/
+    - assets/icons/app/
     - assets/lottie/
   fonts:
     - family: SFProDisplay

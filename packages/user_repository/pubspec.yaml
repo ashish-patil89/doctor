@@ -12,6 +12,8 @@ dependencies:
     path: ../api_client
   api_models:
     path: ../api_models
+  storage:
+    path: ../storage/storage
   collection: ^1.18.0
   equatable: ^2.0.5
   flutter:

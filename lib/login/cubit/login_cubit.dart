@@ -18,6 +18,28 @@ class LoginCubit extends Cubit<LoginState> {
   final UserRepository _userRepository;
   final Platform _localPlatform;
 
+  Future<bool> isValidSession() async {
+    try {
+      emit(
+        state.copyWith(
+          loginStatus: LoginStatus.checking,
+        ),
+      );
+
+      final accessToken = await _userRepository.getAccessToken();
+
+      emit(
+        state.copyWith(
+          isValidSession: accessToken != null,
+        ),
+      );
+      return true;
+    } catch (error, stackTrace) {
+      addError(error, stackTrace);
+      return false;
+    }
+  }
+
   Future<void> login() async {
     try {
       emit(
@@ -26,12 +48,12 @@ class LoginCubit extends Cubit<LoginState> {
         ),
       );
 
-      final success = await _userRepository.login(
+      final token = await _userRepository.login(
         email: state.email,
         password: state.password,
       );
 
-      if (success) {
+      if (token != null) {
         emit(
           state.copyWith(
             loginStatus: LoginStatus.success,
