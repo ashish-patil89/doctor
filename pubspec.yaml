@@ -1,5 +1,5 @@
-name: orb_mobile
-description: Orb mobile app
+name: doctor
+description: Doctor app
 version: 1.227.1
 publish_to: none
 environment:

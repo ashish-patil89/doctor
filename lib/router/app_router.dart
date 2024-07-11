@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:orb_mobile/home/view/home_page.dart';
 import 'package:orb_mobile/login/view/login_page.dart';
+import 'package:orb_mobile/set_schedule/set_schedule.dart';
 import 'package:orb_mobile/signup/view/signup_page.dart';
 import 'package:orb_mobile/splash/splash.dart';
 

@@ -1,6 +1,8 @@
 import 'package:app_ui/app_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:orb_mobile/home/login.dart';
+import 'package:orb_mobile/l10n/l10n.dart';
+import 'package:orb_mobile/router/app_router.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
@@ -43,10 +45,16 @@ class _FeedViewState extends State<HomeView> {
       appBar: AppBar(),
       bottomNavigationBar: HomeBottomNavigationBar(),
       body: SingleChildScrollView(
-        child: Center(
-          child: Text(
-            'Home',
-            style: AppTextStyles.bodyText1,
+        child: Align(
+          alignment: Alignment.bottomCenter,
+          child: AppButton.fullWidth(
+            buttonColor: AppColors.primaryOrange,
+            onPressed: () async {
+              AppRouter.of(context).push(
+                SetScheduleRoute(),
+              );
+            },
+            child: Text(context.l10n.setSchedule),
           ),
         ),
       ),

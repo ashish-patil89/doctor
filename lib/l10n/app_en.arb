@@ -71,5 +71,13 @@
   "termsConditions": "Terms & Condition",
   "@termsConditions": {
     "description": "Text shown in the AppBar of the Home Page"
+  },
+  "setSchedule": "Set Schedule",
+  "@setSchedule": {
+    "description": "Text shown in the AppBar of the Home Page"
+  },
+  "addMoreTime": "+Add More Time",
+  "@addMoreTime": {
+    "description": "Text shown in the AppBar of the Home Page"
   }
 }

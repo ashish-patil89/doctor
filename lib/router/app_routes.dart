@@ -6,6 +6,7 @@ final _appRoutes = <RouteBase>[
   LoginRoute.route,
   SplashRoute.route,
   HomeRoute.route,
+  SetScheduleRoute.route,
 ];
 
 abstract class AppRoute extends Equatable {
@@ -111,6 +112,24 @@ class HomeRoute extends AppRoute {
           key: state.pageKey,
           name: state.name,
           child: const HomePage(),
+        ),
+        parentNavigatorKey: AppRouter.rootNavigatorKey,
+      );
+}
+
+class SetScheduleRoute extends AppRoute {
+  const SetScheduleRoute() : super();
+
+  @override
+  String get path => '/set_schedule';
+
+  static GoRoute get route => GoRoute(
+        path: '/set_schedule',
+        name: 'SetSchedule',
+        pageBuilder: (context, state) => MaterialPage<void>(
+          key: state.pageKey,
+          name: state.name,
+          child: const SetSchedulePage(),
         ),
         parentNavigatorKey: AppRouter.rootNavigatorKey,
       );
