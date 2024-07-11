@@ -1,6 +1,6 @@
 {
   "@@locale": "en",
-  "appBarTitle": "Orb",
+  "appBarTitle": "Doctor",
   "@appBarTitle": {
     "description": "Text shown in the AppBar of the Home Page"
   },
