@@ -1,8 +1,8 @@
 import 'package:app_ui/app_ui.dart';
+import 'package:doctor/home/login.dart';
+import 'package:doctor/l10n/l10n.dart';
+import 'package:doctor/router/app_router.dart';
 import 'package:flutter/material.dart';
-import 'package:orb_mobile/home/login.dart';
-import 'package:orb_mobile/l10n/l10n.dart';
-import 'package:orb_mobile/router/app_router.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({

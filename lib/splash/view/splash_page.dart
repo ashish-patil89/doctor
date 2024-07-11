@@ -1,8 +1,8 @@
 import 'package:app_ui/app_ui.dart';
+import 'package:doctor/router/app_router.dart';
+import 'package:doctor/splash/cubit/splash_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:orb_mobile/router/app_router.dart';
-import 'package:orb_mobile/splash/cubit/splash_cubit.dart';
 import 'package:user_repository/user_repository.dart';
 
 class SplashPage extends StatelessWidget {

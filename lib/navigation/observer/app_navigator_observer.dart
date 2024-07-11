@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'dart:developer';
 
+import 'package:doctor/router/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:orb_mobile/router/app_router.dart';
 
 class AppNavigatorObserver extends NavigatorObserver {
   final Map<Route<dynamic>, AppRouteExtra?> _routeExtras = {};

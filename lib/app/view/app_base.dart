@@ -1,6 +1,6 @@
 import 'package:app_ui/app_ui.dart';
+import 'package:doctor/l10n/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:orb_mobile/l10n/l10n.dart';
 
 class AppBase extends StatefulWidget {
   const AppBase({super.key});

@@ -1,10 +1,9 @@
 import 'package:app_ui/app_ui.dart';
+import 'package:doctor/l10n/l10n.dart';
+import 'package:doctor/set_schedule/cubit/set_schedule_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:orb_mobile/l10n/l10n.dart';
 import 'package:user_repository/user_repository.dart';
-
-import '../cubit/set_schedule_cubit.dart';
 
 class SetSchedulePage extends StatelessWidget {
   const SetSchedulePage({

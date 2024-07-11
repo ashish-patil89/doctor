@@ -1,9 +1,9 @@
 import 'package:app_ui/app_ui.dart';
+import 'package:doctor/l10n/l10n.dart';
+import 'package:doctor/login/cubit/login_cubit.dart';
+import 'package:doctor/signup/widget/signup_input_action.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:orb_mobile/l10n/l10n.dart';
-import 'package:orb_mobile/login/cubit/login_cubit.dart';
-import 'package:orb_mobile/signup/widget/signup_input_action.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({

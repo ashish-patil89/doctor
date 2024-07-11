@@ -1,15 +1,15 @@
 import 'dart:async';
 import 'dart:developer';
 
+import 'package:doctor/home/view/home_page.dart';
+import 'package:doctor/login/view/login_page.dart';
+import 'package:doctor/set_schedule/set_schedule.dart';
+import 'package:doctor/signup/view/signup_page.dart';
+import 'package:doctor/splash/splash.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:orb_mobile/home/view/home_page.dart';
-import 'package:orb_mobile/login/view/login_page.dart';
-import 'package:orb_mobile/set_schedule/set_schedule.dart';
-import 'package:orb_mobile/signup/view/signup_page.dart';
-import 'package:orb_mobile/splash/splash.dart';
 
 import '../app/view/app_base.dart';
 

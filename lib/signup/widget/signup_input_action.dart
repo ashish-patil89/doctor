@@ -1,8 +1,8 @@
 import 'package:app_ui/app_ui.dart';
+import 'package:doctor/l10n/l10n.dart';
+import 'package:doctor/signup/cubit/cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:orb_mobile/l10n/l10n.dart';
-import 'package:orb_mobile/signup/cubit/cubit.dart';
 
 class SignupInputAction extends StatefulWidget {
   const SignupInputAction({
